@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.beijingtu{
+    background: url(images/banna.png) no-repeat center;
+    background-size: 1524px 643px;
+}
+.kuangjia{
+    width: 963px;
+    height: 643px;
+    margin: 0 auto
+}
+.daohang_1{
+    width: 396px;
+     height: 30px;
+    left: 365px;
+    position: relative;
+    display: -webkit-inline-box;
+    margin: 10px 0;
+}
+.daohang_1 input{
+    width: 168px;
+    height: 24px;
+    padding: 0 30px 0 0;
+}
+.daohang_1 button{
+    width: 30px;
+    height: 28px;
+    position: relative;
+    right: 34px;
+    font-size: 12px;
+}
+.daohang_1 input{
+    position: relative;
+}
+.daohang_1 ul{
+     width: 396px;
+     height: 30px;
+     margin: 0 auto;
+}
+.daohang_1 ul li{
+    float:  left;
+    list-style: none;
+    width: 66px;
+    height: 30px;
+    line-height: 30px;
+    color: #000;
+    font-size: 12px;
+    text-align: center;
+}
+.daohang_2{
+    width: 963px;
+    height: 90px;
+    position: relative;
+}
+.daohang_fe1{
+    width: 200px;
+    height: 90px;
+    background: red;
+    display: flex;
+    justify-content: space-around;
+}
+.daohang_fe1 a{
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.daohang_fen2{
+    width: 751px;
+    height: 90px;
+    color: #000;
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    background: rgb(238, 148, 175)
+}
+.daohang_fen2 ul{
+    width: 751px;
+    height: 90px;  
+}
+.daohang_fen2 ul li{
+    float: left;
+    list-style: none;
+    width: 125px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+}
+.daohang_fen2 ul li:hover{
+    background:rgb(255, 255, 255);
+}
+.yincang{
+    position: relative;
+    width: 963px;
+}
+.yincang ul{
+    width: 963px;
+}
+.yincang ul li{
+    float: left;
+    list-style: none;
+}
+.yin1,.yin2,.yin3,.yin4,.yin5,.yin6{
+    background: rgb(255, 255, 255);
+    display: none;
+}
+.li1 ul,.li2 ul{
+    width: 550px;
+    height: 200px;
+}
+.li3 ul{
+    width: 450px;
+    height: 200px;
+}
+.li4 ul{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    left: 50px;
+}
+.li5 ul{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    left: 175px;
+}
+.li6 ul{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    left: 300px;
+}
+.yin4{
+    width: 550px;
+    height: 200px;
+}
+.zhongbu{
+    width: 963px;
+    height: 699px;
+    margin: 20px auto;
+}
+.lianglan{
+    width: 692px;
+    height: 355px;
+    float: left; 
+    position: relative;
+    overflow: hidden; 
+    
+}
+.lunbo1 {
+    width: 2079px;
+    position: absolute;
+    margin: 20px auto;
+}
+.lunbo1 a{
+    float: left;
+    width: 220px;
+    margin-right: 11px;
+    text-decoration:none
+}
+.lunbo1 img{   
+}
+.wolongtu{
+    margin: 20px auto;
+}
+.qiyebao{
+    width: 270px;
+    height: 354px;
+    float: left;
+}
+
+.k1{
+    width: 692px;
+    height: 40px;
+    border-left: 4px solid #d80025;
+    display: flex;
+    align-items: center;
+}
+.k2{
+    width: 257px;
+    height: 40px;
+    border-left: 4px solid #d80025;
+    display: flex;
+    align-items: center;
+}
+.k1 h3,.k2 h3{
+    padding-left: 20px;
+}
+
+.lunbo1 p{
+    width: 220px;
+    height: 35px;
+    background: #000;
+    opacity: 0.7;
+    position: relative;
+    top: -40px;
+}
+.lunbo1 span{
+    display: block;
+    line-height: 35px;
+    color: #fff;
+}
+.lunbo1 i{
+    color: rgb(8, 8, 8);
+}
+.lunbo1 h4{
+    width: 100%;
+    margin-top: -20px;
+    color: #000;
+}
+#aaa{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background: red;
+    position: fixed;
+    right: 0;
+    top: 400px;
+}
+.zuidicengle{
+    width: 962px;
+    height: 207px;
+    margin: 20px auto;
+    display:flex; 
+}
+
+.zdcl1{
+    width: 120px;
+    height: 207px;
+    background: rgb(183, 228, 236);
+}
+.zdcl1 p,.zdcl3 p{
+    line-height: 207px;
+    text-align: center;
+}
+.zdcl2{
+    width: 774px;
+    height: 207px;
+    background: rgb(157, 166, 206);
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.zdcl2 ul{
+    width: 2322px;
+    position: absolute;
+}
+.zdcl3{
+    width: 72px;
+    height: 207px;
+    background: rgb(183, 228, 236);
+    float: left;
+}
+.zdcl2 ul li{
+    float: left;
+    list-style: none;
+    width: 258px;
+    height: 200px;
+    line-height: 220px;
+    text-align: center;  
+}
+#dingbu{
+    width: 22px;
+    position: fixed;
+    right: 10px;
+    top: 70%;
+    transition: 0.4s;
+}
+#dingbu:hover{
+    transform: scale(1.5)
+}
+.budong{
+    position: fixed;
+    top: 0;
+    
+}
+.xuanting{
+    width: 100px;
+    height: 100px;
+    background: #d80025
+}
+.ting ul li{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    background:#000;
+    color: #fff;
+}
+.dingzaina{
+    position: fixed;
+    top: 0px
+}
+.ting{
+    position: absolute;
+    top: 240px;
+}

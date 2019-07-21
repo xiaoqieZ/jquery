@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0;padding: 0;}
+		ul,li{list-style:none;}
+		#banner{width:800px;height: 400px;margin:40px auto;position: relative;overflow: hidden;}
+		#banner>ul{position: absolute;}
+		#banner>ul>li{float: left;}
+		ul>li>img{width:800px;height: 400px;}
+		#direction>a{position: absolute;width:80px;height: 40px;text-align: center;line-height: 40px;color: #fff;text-decoration: none;background: #000;top:160px;opacity: 0.6;}
+		#direction>a:nth-child(2){right: 0;}
+		#btn{position: absolute;left:40%;bottom:20px;}
+		#btn>a{float: left;width:25px;height: 25px;background: #000;border-radius: 50%;margin:5px;}
+		#btn>.active{background: #fff;}
+	</style>
+</head>
+<body>
+	<div id="banner">
+		<ul>
+			<li><img src="images/1.jpg"/></li>
+			<li><img src="images/2.jpg"/></li>
+			<li><img src="images/3.jpg"/></li>
+			<li><img src="images/4.jpg"/></li>
+		</ul>
+		<div id="direction">
+			<a href="##"><</a>
+			<a href="##">></a>
+		</div>
+		<div id="btn">
+			<a href="##" class="active"></a>
+			<a href="##"></a>
+			<a href="##"></a>
+			<a href="##"></a>
+		</div>
+	</div>
+</body>
+</html>
+<script src="../../pool.js"></script>
+<script>
+var oBanner = document.getElementById("banner");
+var oUl = oBanner.getElementsByTagName("ul")[0];
+var aLi = oUl.getElementsByTagName("li");
+var oDir = document.getElementById("direction");
+var aA = oDir.getElementsByTagName("a");
+var aBtn = document.getElementById("btn").getElementsByTagName("a");
+var iNow = 0;
+var timer = null;
+//计算ul的宽度
+var li = aLi[0].cloneNode(true);
+oUl.appendChild(li);
+var len = aLi.length;
+var iw = aLi[0].offsetWidth;
+oUl.style.width = len*iw+'px';
+
+
+
+
+for(var i=0;i<aBtn.length;i++){
+	aBtn[i].index = i;
+	aBtn[i].onmouseover = function(){
+		for(var j=0;j<aBtn.length;j++){
+			aBtn[j].className = '';
+		}
+		this.className = "active";
+		move(oUl,{"left":-this.index*iw});
+		iNow = this.index;
+
+	}
+}
+
+
+
+aA[1].onclick = function(){
+	if(iNow==aLi.length-1){
+			iNow = 1;
+			oUl.style.left = 0;
+	}else{
+		iNow++;
+	}
+		toImg();
+}
+
+aA[0].onclick = function(){
+	if(iNow==0){
+		iNow = aLi.length-2;
+		oUl.style.left = -(aLi.length-1)*iw+'px';
+	}else{
+		iNow--;
+	}
+	toImg();
+}
+
+
+//轮播停止
+oBanner.onmouseover = function(){
+	clearInterval(timer)
+}
+//轮播开始
+oBanner.onmouseout = function(){
+	autoPlay()
+}
+
+autoPlay()
+
+function autoPlay(){
+	timer = setInterval(function(){
+		if(iNow==aLi.length-1){
+			iNow = 1;
+			oUl.style.left = 0;
+		}else{
+			iNow++;
+		}
+		toImg();
+	},3000)
+}
+
+
+//轮播原理
+function toImg(){
+	move(oUl,{"left":-iNow*iw});
+	for(var i=0;i<aBtn.length;i++){
+		aBtn[i].className = "";	
+	}
+	aBtn[iNow==aLi.length-1?0:iNow].className = "active";
+}
+</script>
